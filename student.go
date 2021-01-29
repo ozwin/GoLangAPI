@@ -50,6 +50,8 @@ func (students Students) RemoveStudent(removeUSN string) error {
 	}
 	return errors.New("Student does not exist")
 }
+
+//this function is written just to demonstrate channel
 func nextAvailableUSN(c chan string) {
 	for {
 		c <- "NI" + strconv.Itoa(rand.Intn(9999))

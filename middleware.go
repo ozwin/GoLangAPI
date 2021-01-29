@@ -7,18 +7,7 @@ import (
 //AuthorizeRequest ...
 func AuthorizeRequest(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		//json token may be or cookie
-		//fmt.Fprintln(w, "Before autherization")
+		//json token validation can be added and request can be rejected from here if autorization fails
 		next.ServeHTTP(w, r)
-		//fmt.Fprintln(w, "After autherization")
 	})
 }
-
-//JSONPayloadMiddleware ...
-// func JSONPayloadMiddleware(next http.Handler) http.Handler {
-// 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-// 		//set json defaults for payload
-// 		fmt.Fprintln(w, "from json middlewear")
-// 		next.ServeHTTP(w, r)
-// 	})
-// }
