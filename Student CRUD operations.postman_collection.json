@@ -1,0 +1,95 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Student CRUD operations",
+		"_postman_id": "54e3a116-50ee-d509-1b56-424164b5abb7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete a student",
+			"request": {
+				"url": "http://localhost:8080/Student/Delete/N15",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Students",
+			"request": {
+				"url": "http://localhost:8080/Student/GetAll",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Student",
+			"request": {
+				"url": "http://localhost:8080/Student/Create",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"Name\": \"Jack Sparrow\",\r\n        \"Batch\": \"PG\"\r\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student details by ID",
+			"request": {
+				"url": "http://localhost:8080/Student/N14",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk Insert",
+			"request": {
+				"url": "http://localhost:8080/Student/BulkInsert",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"Name\": \"ABC\",\r\n        \"Batch\": \"UG\"\r\n    },\r\n    {\r\n        \"Name\": \"Brandon\",\r\n        \"Batch\": \"PG\"\r\n    },\r\n    {\r\n        \"Name\": \"James\",\r\n        \"Batch\": \"UG\"\r\n    }\r\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update details",
+			"request": {
+				"url": "http://localhost:8080/Student/Update",
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Name\": \"James Williams\",\r\n        \"USN\": \"NI12\",\r\n        \"Batch\": \"PG\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
